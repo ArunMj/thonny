@@ -42,6 +42,7 @@ from thonny.ui_utils import Command, notebook_contains
 from thonny import user_logging
 from thonny import misc_utils
 import subprocess
+from thonny.misc_utils import running_on_mac_os
 
 
 
@@ -272,7 +273,7 @@ class Thonny(tk.Tk):
                 "---", 
 #                Command('exec',                 'Execute current focus', "F7", self),
 #                Command('zoom',                 'Zoom in',               "F8", self),
-                Command('step',                 'Step',                  "F9", self),
+                Command('step',                 'Step',                  "F7", self),
                 "---", 
                 Command('set_auto_cd', 'Auto-cd to script dir',  None, self,
                         kind="checkbutton", variable_name="run.auto_cd"),
@@ -306,7 +307,7 @@ class Thonny(tk.Tk):
             # use Command instead of Ctrl in accelerators
             for __, __, items in self._menus:
                 for item in items:
-                    if isinstance(item, Command) and isinstance(item.accelerator, str):
+                    if isinstance(item, Command) and isinstance(item.accelerator, str) and not "F5" in str:
                         item.accelerator = item.accelerator.replace("Ctrl", "Command") 
         else:
             # insert "about" to Help (last) menu ...
