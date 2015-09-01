@@ -307,7 +307,7 @@ class Thonny(tk.Tk):
             # use Command instead of Ctrl in accelerators
             for __, __, items in self._menus:
                 for item in items:
-                    if isinstance(item, Command) and isinstance(item.accelerator, str) and not "F5" in str:
+                    if isinstance(item, Command) and isinstance(item.accelerator, str) and "F5" not in item.accelerator:
                         item.accelerator = item.accelerator.replace("Ctrl", "Command") 
         else:
             # insert "about" to Help (last) menu ...
