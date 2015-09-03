@@ -14,9 +14,9 @@ AppVerName=Thonny {#AppVer}
 ;AppComments string is displayed on the "Support" dialog of the Add/Remove Programs Control Panel applet
 AppComments=Thonny is Python IDE for beginners
 AppPublisher=Aivar Annamaa
-AppPublisherURL=https://bitbucket.org/aivarannamaa/thonny
-AppSupportURL=https://bitbucket.org/aivarannamaa/thonny
-AppUpdatesURL=https://bitbucket.org/aivarannamaa/thonny
+AppPublisherURL=http://thonny.cs.ut.ee
+AppSupportURL=http://thonny.cs.ut.ee
+AppUpdatesURL=http://thonny.cs.ut.ee
 DefaultDirName={userpf}\Thonny
 DirExistsWarning=auto
 UsePreviousAppDir=yes
@@ -38,7 +38,7 @@ ChangesAssociations=yes
 ; http://pete.akeo.ie/2011/11/free-code-signing-certificate-for-open.html
 ; http://blog.ksoftware.net/2011/07/exporting-your-code-signing-certificate-to-a-pfx-file-from-firefox/
 ; http://blog.ksoftware.net/2011/07/how-to-automate-code-signing-with-innosetup-and-ksign/
-SignTool=signtool /d $qInstaller for Thonny {#AppVer}$q /du $qhttps://bitbucket.org/aivarannamaa/thonny$q $f
+;SignTool=signtool /d $qInstaller for Thonny {#AppVer}$q /du $qhttp://thonny.cs.ut.ee$q $f
 
 
 [Languages]
